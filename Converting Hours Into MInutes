@@ -1,0 +1,21 @@
+Here is the bash code to convert the hrs. in Min. It will help us Masure the time in Mins.
+#!/bin/bash
+
+hours=3
+minutes=$(echo "scale=2; $hours * 60" | bc)
+
+echo "$hours hours is equal to $minutes minutes."
+
+
+
+For Example I am converting 4 Hours 30 Minutes into Minutes below
+
+#!/bin/bash
+
+hours=4
+minutes_in_hour=60
+total_mins=$(expr $hours \* $minutes_in_hour)
+extra_mins=30
+
+total_mins=$(expr "$total_mins + $extra_mins")
+echo "The equivalent of 4 hours and 30 minutes in minutes is: $total_mins"
